@@ -24,7 +24,7 @@ struct TransactionHistoryView: View {
             
             
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack {
+                HStack(spacing: 30) {
                     ForEach(transitions) { transition in
                         setupTransitionHistoryView(with: transition)
                     }
