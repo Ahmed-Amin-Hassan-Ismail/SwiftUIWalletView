@@ -16,9 +16,7 @@
 		AC6971142A55FF7C00F88839 /* TransactionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6971132A55FF7C00F88839 /* TransactionHistoryView.swift */; };
 		AC6971172A56008600F88839 /* ProviderPreview + EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6971162A56008600F88839 /* ProviderPreview + EXT.swift */; };
 		AC6971192A56029A00F88839 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6971182A56029A00F88839 /* CardView.swift */; };
-		AC69711C2A56033100F88839 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69711B2A56033100F88839 /* TransactionViewModel.swift */; };
-		AC69711E2A56034500F88839 /* CardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69711D2A56034500F88839 /* CardViewModel.swift */; };
-		AC6971202A56066800F88839 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69711F2A56066800F88839 /* HomeView.swift */; };
+		AC6971222A5606B700F88839 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6971212A5606B700F88839 /* WalletView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,9 +30,7 @@
 		AC6971132A55FF7C00F88839 /* TransactionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryView.swift; sourceTree = "<group>"; };
 		AC6971162A56008600F88839 /* ProviderPreview + EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProviderPreview + EXT.swift"; sourceTree = "<group>"; };
 		AC6971182A56029A00F88839 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		AC69711B2A56033100F88839 /* TransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
-		AC69711D2A56034500F88839 /* CardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewModel.swift; sourceTree = "<group>"; };
-		AC69711F2A56066800F88839 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AC6971212A5606B700F88839 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +66,6 @@
 				AC6970FB2A55FCDB00F88839 /* AppleWalletApp.swift */,
 				AC6971152A56007900F88839 /* Extensions */,
 				AC69710B2A55FE5100F88839 /* Model */,
-				AC69711A2A56031F00F88839 /* ViewModel */,
 				AC69710C2A55FE5B00F88839 /* Views */,
 				AC6970FF2A55FCDC00F88839 /* Assets.xcassets */,
 				AC6971012A55FCDC00F88839 /* Preview Content */,
@@ -99,7 +94,7 @@
 		AC69710C2A55FE5B00F88839 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AC69711F2A56066800F88839 /* HomeView.swift */,
+				AC6971212A5606B700F88839 /* WalletView.swift */,
 				AC6971182A56029A00F88839 /* CardView.swift */,
 				AC6971132A55FF7C00F88839 /* TransactionHistoryView.swift */,
 			);
@@ -112,15 +107,6 @@
 				AC6971162A56008600F88839 /* ProviderPreview + EXT.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		AC69711A2A56031F00F88839 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				AC69711D2A56034500F88839 /* CardViewModel.swift */,
-				AC69711B2A56033100F88839 /* TransactionViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,15 +180,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC6971102A55FEBA00F88839 /* Card.swift in Sources */,
+				AC6971222A5606B700F88839 /* WalletView.swift in Sources */,
 				AC69710E2A55FE6700F88839 /* Transaction.swift in Sources */,
 				AC6970FC2A55FCDB00F88839 /* AppleWalletApp.swift in Sources */,
-				AC6971202A56066800F88839 /* HomeView.swift in Sources */,
 				AC6971142A55FF7C00F88839 /* TransactionHistoryView.swift in Sources */,
 				AC6971122A55FF1800F88839 /* CardType.swift in Sources */,
 				AC6971192A56029A00F88839 /* CardView.swift in Sources */,
 				AC6971172A56008600F88839 /* ProviderPreview + EXT.swift in Sources */,
-				AC69711C2A56033100F88839 /* TransactionViewModel.swift in Sources */,
-				AC69711E2A56034500F88839 /* CardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

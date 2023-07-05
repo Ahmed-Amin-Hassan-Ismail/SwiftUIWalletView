@@ -10,14 +10,7 @@ import SwiftUI
 struct TransactionHistoryView: View {
     
     //MARK: - Attributes
-    
-    private var transaction: Transaction
-    
-    //MARK: - Init
-    
-    init(transaction: Transaction) {
-        self.transaction = transaction
-    }
+    private var transitions: [Transaction] = DeveloperPreview.instance.transactions
     
     //MARK: - Init
     
@@ -30,7 +23,13 @@ struct TransactionHistoryView: View {
                 .fontWeight(.black)
             
             
-            historyView
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack {
+                    ForEach(transitions) { transition in
+                        setupTransitionHistoryView(with: transition)
+                    }
+                }
+            }
             
         }
     }
@@ -40,24 +39,24 @@ struct TransactionHistoryView: View {
 
 extension TransactionHistoryView {
     
-    private var historyView: some View {
+    private func setupTransitionHistoryView(with transition: Transaction) -> some View {
         
         VStack {
             
-            Image(systemName: transaction.icon)
+            Image(systemName: transition.icon)
                 .font(.system(size: 50))
                 .padding(.bottom, 10)
             
-            Text(transaction.merchant)
+            Text(transition.merchant)
                 .font(.system(.body, design: .rounded))
                 .fontWeight(.bold)
             
-            Text("$\(String(format: "%0.1f", transaction.amount))")
+            Text("$\(String(format: "%0.1f", transition.amount))")
                 .font(.system(.largeTitle, design: .rounded))
                 .fontWeight(.bold)
                 .padding(.bottom, 30)
             
-            Text(transaction.date)
+            Text(transition.date)
                 .font(.system(.caption, design: .rounded))
             
         }
@@ -67,11 +66,10 @@ extension TransactionHistoryView {
                 .fill(Color.gray.opacity(0.2))
         )
     }
-    
 }
 
 struct TransactionHistoryView_Previews: PreviewProvider {
     static var previews: some View {
-        TransactionHistoryView(transaction: dev.testTransactions[0])
+        TransactionHistoryView()
     }
 }
