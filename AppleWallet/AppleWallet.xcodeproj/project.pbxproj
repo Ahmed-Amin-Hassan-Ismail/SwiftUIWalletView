@@ -8,23 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		AC6970FC2A55FCDB00F88839 /* AppleWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6970FB2A55FCDB00F88839 /* AppleWalletApp.swift */; };
-		AC6970FE2A55FCDB00F88839 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6970FD2A55FCDB00F88839 /* ContentView.swift */; };
 		AC6971002A55FCDC00F88839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6970FF2A55FCDC00F88839 /* Assets.xcassets */; };
 		AC6971032A55FCDC00F88839 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6971022A55FCDC00F88839 /* Preview Assets.xcassets */; };
 		AC69710E2A55FE6700F88839 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69710D2A55FE6700F88839 /* Transaction.swift */; };
 		AC6971102A55FEBA00F88839 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC69710F2A55FEBA00F88839 /* Card.swift */; };
 		AC6971122A55FF1800F88839 /* CardType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6971112A55FF1800F88839 /* CardType.swift */; };
+		AC6971142A55FF7C00F88839 /* TransactionHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6971132A55FF7C00F88839 /* TransactionHistoryView.swift */; };
+		AC6971172A56008600F88839 /* ProviderPreview + EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6971162A56008600F88839 /* ProviderPreview + EXT.swift */; };
+		AC6971192A56029A00F88839 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6971182A56029A00F88839 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AC6970F82A55FCDB00F88839 /* AppleWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6970FB2A55FCDB00F88839 /* AppleWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWalletApp.swift; sourceTree = "<group>"; };
-		AC6970FD2A55FCDB00F88839 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC6970FF2A55FCDC00F88839 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC6971022A55FCDC00F88839 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC69710D2A55FE6700F88839 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		AC69710F2A55FEBA00F88839 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AC6971112A55FF1800F88839 /* CardType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardType.swift; sourceTree = "<group>"; };
+		AC6971132A55FF7C00F88839 /* TransactionHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryView.swift; sourceTree = "<group>"; };
+		AC6971162A56008600F88839 /* ProviderPreview + EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProviderPreview + EXT.swift"; sourceTree = "<group>"; };
+		AC6971182A56029A00F88839 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				AC6970FB2A55FCDB00F88839 /* AppleWalletApp.swift */,
-				AC6970FD2A55FCDB00F88839 /* ContentView.swift */,
+				AC6971152A56007900F88839 /* Extensions */,
 				AC69710B2A55FE5100F88839 /* Model */,
 				AC69710C2A55FE5B00F88839 /* Views */,
 				AC6970FF2A55FCDC00F88839 /* Assets.xcassets */,
@@ -88,8 +92,18 @@
 		AC69710C2A55FE5B00F88839 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC6971182A56029A00F88839 /* CardView.swift */,
+				AC6971132A55FF7C00F88839 /* TransactionHistoryView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AC6971152A56007900F88839 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AC6971162A56008600F88839 /* ProviderPreview + EXT.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,11 +176,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC6970FE2A55FCDB00F88839 /* ContentView.swift in Sources */,
 				AC6971102A55FEBA00F88839 /* Card.swift in Sources */,
 				AC69710E2A55FE6700F88839 /* Transaction.swift in Sources */,
 				AC6970FC2A55FCDB00F88839 /* AppleWalletApp.swift in Sources */,
+				AC6971142A55FF7C00F88839 /* TransactionHistoryView.swift in Sources */,
 				AC6971122A55FF1800F88839 /* CardType.swift in Sources */,
+				AC6971192A56029A00F88839 /* CardView.swift in Sources */,
+				AC6971172A56008600F88839 /* ProviderPreview + EXT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
