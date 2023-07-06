@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC1373C32A57170E00FB3C18 /* TransactionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1373C22A57170E00FB3C18 /* TransactionView.swift */; };
+		AC1373C62A5717BC00FB3C18 /* WalletViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1373C52A5717BC00FB3C18 /* WalletViewModel.swift */; };
 		AC6970FC2A55FCDB00F88839 /* AppleWalletApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6970FB2A55FCDB00F88839 /* AppleWalletApp.swift */; };
 		AC6971002A55FCDC00F88839 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6970FF2A55FCDC00F88839 /* Assets.xcassets */; };
 		AC6971032A55FCDC00F88839 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6971022A55FCDC00F88839 /* Preview Assets.xcassets */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC1373C22A57170E00FB3C18 /* TransactionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionView.swift; sourceTree = "<group>"; };
+		AC1373C52A5717BC00FB3C18 /* WalletViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletViewModel.swift; sourceTree = "<group>"; };
 		AC6970F82A55FCDB00F88839 /* AppleWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6970FB2A55FCDB00F88839 /* AppleWalletApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWalletApp.swift; sourceTree = "<group>"; };
 		AC6970FF2A55FCDC00F88839 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC1373C42A5717B100FB3C18 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AC1373C52A5717BC00FB3C18 /* WalletViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		AC6970EF2A55FCDB00F88839 = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +78,7 @@
 				AC6970FB2A55FCDB00F88839 /* AppleWalletApp.swift */,
 				AC6971152A56007900F88839 /* Extensions */,
 				AC69710B2A55FE5100F88839 /* Model */,
+				AC1373C42A5717B100FB3C18 /* ViewModel */,
 				AC69710C2A55FE5B00F88839 /* Views */,
 				AC6970FF2A55FCDC00F88839 /* Assets.xcassets */,
 				AC6971012A55FCDC00F88839 /* Preview Content */,
@@ -97,6 +110,7 @@
 				AC6971212A5606B700F88839 /* WalletView.swift */,
 				AC6971182A56029A00F88839 /* CardView.swift */,
 				AC6971132A55FF7C00F88839 /* TransactionHistoryView.swift */,
+				AC1373C22A57170E00FB3C18 /* TransactionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,7 +200,9 @@
 				AC6971142A55FF7C00F88839 /* TransactionHistoryView.swift in Sources */,
 				AC6971122A55FF1800F88839 /* CardType.swift in Sources */,
 				AC6971192A56029A00F88839 /* CardView.swift in Sources */,
+				AC1373C62A5717BC00FB3C18 /* WalletViewModel.swift in Sources */,
 				AC6971172A56008600F88839 /* ProviderPreview + EXT.swift in Sources */,
+				AC1373C32A57170E00FB3C18 /* TransactionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
