@@ -14,7 +14,9 @@ final class WalletViewModel: ObservableObject {
     
     @Published var cards: [Card] = []
     @Published var transactions: [Transaction] = []
+    @Published var selectedCard: Card? = nil
     @Published var isCardPresented: Bool = false
+    @Published var isCardPressed: Bool = false
     
     private let cardOffset: CGFloat = 50.0
     
@@ -40,6 +42,7 @@ final class WalletViewModel: ObservableObject {
     func index(for card: Card) -> Int? {
         
         guard let index = cards.firstIndex(where: { $0.id == card.id }) else {
+            
             return nil
         }
         
@@ -49,6 +52,7 @@ final class WalletViewModel: ObservableObject {
     func zIndex(for card: Card) -> Double {
         
         guard let cardIndex = index(for: card) else {
+            
             return 0.0
         }
         
@@ -58,7 +62,24 @@ final class WalletViewModel: ObservableObject {
     func offset(for card: Card) -> CGSize {
         
         guard let cardIndex = index(for: card) else {
+            
             return .zero
+        }
+        
+        if isCardPressed {
+            
+            guard let selectedCard = selectedCard,
+                  let selectedCardIndex = index(for: selectedCard) else {
+                
+                return .zero
+            }
+            
+            if cardIndex >= selectedCardIndex {
+                
+                return .zero
+            }
+            
+            return CGSize(width: 0, height: 1400)
         }
         
         return CGSize(width: 0, height: -(cardOffset * CGFloat(cardIndex)))
@@ -73,5 +94,10 @@ final class WalletViewModel: ObservableObject {
         }
         
         return Double(cards.count - index) * 0.1
+    }
+    
+    func selectSpecificCard(with card: Card) {
+        isCardPressed.toggle()
+        selectedCard = isCardPressed ? card : nil
     }
 }
