@@ -14,6 +14,7 @@ final class WalletViewModel: ObservableObject {
     
     @Published var cards: [Card] = []
     @Published var transactions: [Transaction] = []
+    @Published var isCardPresented: Bool = false
     
     private let cardOffset: CGFloat = 50.0
     
@@ -64,4 +65,13 @@ final class WalletViewModel: ObservableObject {
         
     }
     
+    func animationWithDelay(for card: Card) -> Double {
+        
+        
+        guard let index = index(for: card) else {
+            return 0.0
+        }
+        
+        return Double(cards.count - index) * 0.1
+    }
 }
